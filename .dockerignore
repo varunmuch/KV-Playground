@@ -1,0 +1,7 @@
+**/node_modules
+web/dist
+engine/.venv
+**/__pycache__
+.git
+.DS_Store
+docs

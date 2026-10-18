@@ -1,0 +1,41 @@
+/* Design tokens. Data colors are for charts and memory diagrams only, never decoration. */
+:root {
+  /* Type */
+  --font-sans: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Neutrals */
+  --color-bg: #f5f6f3;
+  --color-surface: #ffffff;
+  --color-text: #15171c;
+  --color-text-muted: #4a4f59;
+  --color-text-faint: #6b707a;
+  --color-border: #d9dcd5;
+  --color-border-strong: #b9bdb5;
+  --color-fill: #eef0ec;
+
+  /* Data colors */
+  --data-a: #2f5bd3;
+  --data-a-generated: #a9bcf0;
+  --data-b: #e8892b;
+  --data-b-generated: #f5c796;
+  --data-shared: #0f6b5a;
+  --data-free: #e6e8e3;
+  --data-reserved-border: #8a8f98;
+
+  /* Badges */
+  --badge-measured-bg: #e3ebfb;
+  --badge-measured-text: #1e3f99;
+  --badge-simulated-bg: #eef0ec;
+  --badge-simulated-text: #4a4f59;
+
+  /* Layout */
+  --content-max: 1200px;
+  --gutter: 24px;
+  --radius-card: 12px;
+  --radius-control: 8px;
+  --touch-min: 44px;
+
+  /* Focus */
+  --focus-ring: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-text);
+}

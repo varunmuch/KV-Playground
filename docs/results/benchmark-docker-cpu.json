@@ -1,0 +1,137 @@
+{
+  "model": "Qwen/Qwen3.5-0.8B",
+  "gpu": "CPU (10 cores, no GPU)",
+  "repeats": 1,
+  "no_cache_tokens": 16,
+  "date": "2026-10-18T22:53:06+00:00",
+  "prompt_tokens": [
+    38,
+    40
+  ],
+  "methods": [
+    {
+      "method": "no_cache",
+      "ttft_ms_p50": 686.25,
+      "ttft_ms_p95": 777.98,
+      "ms_per_token": 724.56,
+      "kv_cache_mib": 0.0,
+      "peak_memory_mib": 0.0,
+      "reused_fraction": 0.0,
+      "matches_no_cache": null,
+      "first_difference": null,
+      "per_question": [
+        {
+          "prompt_tokens": 38,
+          "cached_tokens": 0,
+          "ttft_ms": 584.34,
+          "ms_per_token": 698.41,
+          "answer": "You should boil an egg for about 6 to 8 minutes, depending on",
+          "answer_tokens": 16,
+          "finished": false
+        },
+        {
+          "prompt_tokens": 40,
+          "cached_tokens": 0,
+          "ttft_ms": 788.17,
+          "ms_per_token": 750.71,
+          "answer": "You can use melted coconut oil, vegan butter, or even melted butter in a",
+          "answer_tokens": 16,
+          "finished": false
+        }
+      ]
+    },
+    {
+      "method": "dynamic",
+      "ttft_ms_p50": 562.47,
+      "ttft_ms_p95": 565.13,
+      "ms_per_token": 215.73,
+      "kv_cache_mib": 0.773,
+      "peak_memory_mib": 0.0,
+      "reused_fraction": 0.0,
+      "matches_no_cache": true,
+      "first_difference": null,
+      "per_question": [
+        {
+          "prompt_tokens": 38,
+          "cached_tokens": 0,
+          "ttft_ms": 565.42,
+          "ms_per_token": 239.38,
+          "answer": "You should boil an egg for about 6 to 8 minutes, depending on the size of the egg and whether you want it hard or soft.",
+          "answer_tokens": 31,
+          "finished": true
+        },
+        {
+          "prompt_tokens": 40,
+          "cached_tokens": 0,
+          "ttft_ms": 559.52,
+          "ms_per_token": 192.08,
+          "answer": "You can use melted coconut oil, vegan butter, or even melted butter in a substitute pan to bake your favorite recipes.",
+          "answer_tokens": 25,
+          "finished": true
+        }
+      ]
+    },
+    {
+      "method": "static",
+      "ttft_ms_p50": 546.32,
+      "ttft_ms_p95": 559.63,
+      "ms_per_token": 225.56,
+      "kv_cache_mib": 12.457,
+      "peak_memory_mib": 0.0,
+      "reused_fraction": 0.0,
+      "matches_no_cache": true,
+      "first_difference": null,
+      "per_question": [
+        {
+          "prompt_tokens": 38,
+          "cached_tokens": 0,
+          "ttft_ms": 531.54,
+          "ms_per_token": 203.06,
+          "answer": "You should boil an egg for about 6 to 8 minutes, depending on the size of the egg and the thickness of the shell.",
+          "answer_tokens": 29,
+          "finished": true
+        },
+        {
+          "prompt_tokens": 40,
+          "cached_tokens": 0,
+          "ttft_ms": 561.1,
+          "ms_per_token": 248.06,
+          "answer": "You can use melted coconut oil, vegan butter, or even melted butter in a substitute pan to bake your favorite recipes.",
+          "answer_tokens": 25,
+          "finished": true
+        }
+      ]
+    },
+    {
+      "method": "prefix_sharing",
+      "ttft_ms_p50": 820.05,
+      "ttft_ms_p95": 1140.3,
+      "ms_per_token": 222.72,
+      "kv_cache_mib": 0.762,
+      "peak_memory_mib": 0.0,
+      "reused_fraction": 0.2692,
+      "matches_no_cache": true,
+      "first_difference": null,
+      "per_question": [
+        {
+          "prompt_tokens": 38,
+          "cached_tokens": 0,
+          "ttft_ms": 1175.88,
+          "ms_per_token": 219.12,
+          "answer": "You should boil an egg for about 6 to 8 minutes, depending on the size of the egg and the thickness of the shell.",
+          "answer_tokens": 29,
+          "finished": true
+        },
+        {
+          "prompt_tokens": 40,
+          "cached_tokens": 21,
+          "ttft_ms": 464.22,
+          "ms_per_token": 226.33,
+          "answer": "You can use melted coconut oil, vegan butter, or even melted butter in a substitute pan to bake your favorite recipes.",
+          "answer_tokens": 25,
+          "finished": true
+        }
+      ]
+    }
+  ]
+}

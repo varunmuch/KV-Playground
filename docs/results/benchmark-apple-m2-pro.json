@@ -1,0 +1,174 @@
+{
+  "model": "Qwen/Qwen3.5-0.8B",
+  "gpu": "Apple M2 Pro GPU",
+  "repeats": 3,
+  "no_cache_tokens": 16,
+  "date": "2026-10-18T22:50:17+00:00",
+  "prompt_tokens": [
+    38,
+    40,
+    383
+  ],
+  "methods": [
+    {
+      "method": "no_cache",
+      "ttft_ms_p50": 99.31,
+      "ttft_ms_p95": 583.53,
+      "ms_per_token": 103.49,
+      "kv_cache_mib": 0.0,
+      "peak_memory_mib": 1438.6,
+      "reused_fraction": 0.0,
+      "matches_no_cache": null,
+      "first_difference": null,
+      "per_question": [
+        {
+          "prompt_tokens": 38,
+          "cached_tokens": 0,
+          "ttft_ms": 98.78,
+          "ms_per_token": 103.48,
+          "answer": "You should boil an egg for about 6 to 8 minutes, depending on",
+          "answer_tokens": 16,
+          "finished": false
+        },
+        {
+          "prompt_tokens": 40,
+          "cached_tokens": 0,
+          "ttft_ms": 99.31,
+          "ms_per_token": 103.32,
+          "answer": "You can use melted coconut oil, vegan butter, or even melted butter in a",
+          "answer_tokens": 16,
+          "finished": false
+        },
+        {
+          "prompt_tokens": 383,
+          "cached_tokens": 0,
+          "ttft_ms": 580.57,
+          "ms_per_token": 658.08,
+          "answer": "Bread evolved from ancient flat, wild-grain pastes to modern soft,",
+          "answer_tokens": 16,
+          "finished": false
+        }
+      ]
+    },
+    {
+      "method": "dynamic",
+      "ttft_ms_p50": 99.41,
+      "ttft_ms_p95": 588.3,
+      "ms_per_token": 24.5,
+      "kv_cache_mib": 0.832,
+      "peak_memory_mib": 1462.3,
+      "reused_fraction": 0.0,
+      "matches_no_cache": true,
+      "first_difference": null,
+      "per_question": [
+        {
+          "prompt_tokens": 38,
+          "cached_tokens": 0,
+          "ttft_ms": 98.76,
+          "ms_per_token": 24.73,
+          "answer": "You should boil an egg for about 6 to 8 minutes, depending on the size of the egg and whether you want it to be runny or firm.",
+          "answer_tokens": 34,
+          "finished": true
+        },
+        {
+          "prompt_tokens": 40,
+          "cached_tokens": 0,
+          "ttft_ms": 99.15,
+          "ms_per_token": 24.5,
+          "answer": "You can use melted coconut oil, vegan butter, or even melted butter in a substitute pan to bake your favorite recipes.",
+          "answer_tokens": 25,
+          "finished": true
+        },
+        {
+          "prompt_tokens": 383,
+          "cached_tokens": 0,
+          "ttft_ms": 579.39,
+          "ms_per_token": 24.49,
+          "answer": "Bread evolved from ancient flat, wild-grain pastes to modern soft, industrial products, with the rise of commercial yeast and steel mills fundamentally changing its texture, flavor, and accessibility.",
+          "answer_tokens": 39,
+          "finished": true
+        }
+      ]
+    },
+    {
+      "method": "static",
+      "ttft_ms_p50": 108.35,
+      "ttft_ms_p95": 595.65,
+      "ms_per_token": 24.54,
+      "kv_cache_mib": 12.469,
+      "peak_memory_mib": 1477.8,
+      "reused_fraction": 0.0,
+      "matches_no_cache": true,
+      "first_difference": null,
+      "per_question": [
+        {
+          "prompt_tokens": 38,
+          "cached_tokens": 0,
+          "ttft_ms": 108.0,
+          "ms_per_token": 24.38,
+          "answer": "You should boil an egg for about 6 to 8 minutes, depending on the size of the egg and the type of water you use.",
+          "answer_tokens": 30,
+          "finished": true
+        },
+        {
+          "prompt_tokens": 40,
+          "cached_tokens": 0,
+          "ttft_ms": 106.53,
+          "ms_per_token": 24.64,
+          "answer": "You can use melted coconut oil, vegan butter, or even melted butter in a substitute pan to bake your favorite recipes.",
+          "answer_tokens": 25,
+          "finished": true
+        },
+        {
+          "prompt_tokens": 383,
+          "cached_tokens": 0,
+          "ttft_ms": 594.69,
+          "ms_per_token": 24.54,
+          "answer": "Bread evolved from ancient flat, wild-grain pastes to modern soft, industrial products, with the rise of commercial yeast and steel mills revolutionizing its production and accessibility.",
+          "answer_tokens": 36,
+          "finished": true
+        }
+      ]
+    },
+    {
+      "method": "prefix_sharing",
+      "ttft_ms_p50": 176.9,
+      "ttft_ms_p95": 597.2,
+      "ms_per_token": 24.73,
+      "kv_cache_mib": 0.773,
+      "peak_memory_mib": 1481.4,
+      "reused_fraction": 0.0911,
+      "matches_no_cache": true,
+      "first_difference": null,
+      "per_question": [
+        {
+          "prompt_tokens": 38,
+          "cached_tokens": 0,
+          "ttft_ms": 176.9,
+          "ms_per_token": 25.01,
+          "answer": "You should boil an egg for about 6 to 8 minutes, depending on the size of the egg and the thickness of the shell.",
+          "answer_tokens": 29,
+          "finished": true
+        },
+        {
+          "prompt_tokens": 40,
+          "cached_tokens": 21,
+          "ttft_ms": 87.03,
+          "ms_per_token": 24.67,
+          "answer": "You can use melted coconut oil, vegan butter, or even melted butter in a substitute pan to bake your favorite recipes.",
+          "answer_tokens": 25,
+          "finished": true
+        },
+        {
+          "prompt_tokens": 383,
+          "cached_tokens": 21,
+          "ttft_ms": 585.5,
+          "ms_per_token": 25.52,
+          "answer": "Bread evolved from ancient flat, wild-grain pastes to modern soft, industrial products, with the rise of commercial yeast and steel mills revolutionizing its production and accessibility.",
+          "answer_tokens": 36,
+          "finished": true
+        }
+      ]
+    }
+  ]
+}

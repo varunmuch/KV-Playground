@@ -1,0 +1,23 @@
+services:
+  kv-playground:
+    build:
+      context: .
+      args:
+        # cpu: small image, runs anywhere (including Docker on a Mac, which can't use the Mac's GPU).
+        # cuda: for an NVIDIA GPU. Run: TORCH=cuda docker compose up --build, and uncomment "deploy" below.
+        TORCH: ${TORCH:-cpu}
+    ports:
+      - "8000:8000"
+    volumes:
+      - models:/models   # the model downloads once (about 1.6 GB) and is kept here
+    # To use an NVIDIA GPU (needs the NVIDIA Container Toolkit on the host), uncomment:
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+
+volumes:
+  models:
