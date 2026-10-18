@@ -88,7 +88,7 @@ to use an Apple GPU (Docker on a Mac can only use the CPU).
 **1. Get the code**
 
 ```bash
-git clone <your-repo-url> kv-playground
+git clone https://github.com/varunmuch/KV-Playground.git kv-playground
 cd kv-playground
 ```
 
@@ -273,7 +273,7 @@ You get:
 |---|---|
 | Time to first token (TTFT) | How long until the answer starts. Mostly prefill: reading the prompt. |
 | Time per output token | How long each later token takes. This is where the KV cache helps most. |
-| Median / p95 | The typical run, and the slow end (95% of runs are faster). |
+| Median / p95 | The middle observation and the estimated 95th percentile. With only 1–3 repeats per prompt, p95 is descriptive, not a stable tail-latency estimate. |
 | Warm-up | An untimed first run so one-off GPU start-up costs don't count against any method. |
 | Baseline | "No cache": every other method's answer is compared with it. |
 | Greedy decoding | The model always picks its most likely next token, so runs are repeatable. |
@@ -302,8 +302,7 @@ to summarise (383).
 | Time to first token, short questions | 98.8 ms | 98.8 ms | about the same: both read the prompt once |
 
 Without a cache, the time per token grows with the length of everything before it (103 ms
-at 38 tokens, 658 ms at 383). With a cache it stays flat
-(about 24.5 ms), however long the prompt.
+at 38 tokens, 658 ms at 383). With a cache it was roughly flat across these measured prompts (about 24.5 ms). Longer contexts can still increase decoding cost; these results do not establish constant-time decoding.
 
 ### All methods
 
